@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment Portal Admin</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Payment Portal Dashboard</h1>
+
+<p>Manage your payment portal.</p>
+
+<hr>
+
+<h2>Portal Settings</h2>
+
+<form id="settingsForm">
+
+<label>Organization Name</label>
+
+<input
+type="text"
+id="organizationName"
+>
+
+<label>Portal Title</label>
+
+<input
+type="text"
+id="title"
+>
+
+<label>Tagline</label>
+
+<input
+type="text"
+id="tagline"
+>
+
+<label>Description</label>
+
+<textarea
+id="description"
+rows="4">
+</textarea>
+
+<label>Payment Notice</label>
+
+<textarea
+id="paymentNotice"
+rows="3">
+</textarea>
+
+<label>Payment Amount</label>
+
+<input
+type="number"
+id="amount"
+>
+
+<label>Button Text</label>
+
+<input
+type="text"
+id="buttonText"
+>
+
+<label>Footer Text</label>
+
+<input
+type="text"
+id="footer"
+>
+
+<label>Flutterwave Public Key</label>
+
+<input
+type="text"
+id="flutterwavePublicKey"
+>
+
+<br><br>
+
+<label>Organization Logo</label>
+
+<input
+type="file"
+id="logoFile"
+accept="image/*"
+>
+
+<br><br>
+
+<img
+id="logoPreview"
+width="120"
+style="display:none;border-radius:8px;"
+>
+
+<br><br>
+
+<label>Payment Banner</label>
+
+<input
+type="file"
+id="bannerFile"
+accept="image/*"
+>
+
+<br><br>
+
+<img
+id="bannerPreview"
+width="250"
+style="display:none;border-radius:8px;"
+>
+
+<br><br>
+
+<button
+type="submit">
+
+Save Settings
+
+</button>
+
+</form>
+
+<hr>
+
+<button
+id="logoutBtn">
+
+Logout
+
+</button>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

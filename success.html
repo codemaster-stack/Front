@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CampusHub Application Successful</title>
+
+<link rel="stylesheet" href="css/admission.css">
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<div class="card success-card">
+
+
+<div class="logo">
+✅
+</div>
+
+
+<h1>
+🎉 Application Submitted Successfully
+</h1>
+
+
+<p class="subtitle">
+
+Your submition has been confirmed and your admission application has been successfully submitted.
+
+Please save your application reference number. You will need it to track your application status.
+
+</p>
+
+
+<div class="payment-box">
+
+    <h3>
+        Application Tracking Number
+    </h3>
+
+    <h2 id="reference">
+        Loading...
+    </h2>
+
+</div>
+
+<div class="payment-box">
+
+    <h3>
+        Application Status
+    </h3>
+
+    <h2 style="color:green;">
+        Submitted ✓
+    </h2>
+
+</div>
+
+<p>
+
+The University will notify you through your email when your application status changes.
+
+</p>
+
+
+
+<a href="/index">
+
+    <button class="payBtn">
+
+        Return Home
+
+    </button>
+
+</a>
+
+
+
+
+<script>
+
+
+const applicationNumber =
+localStorage.getItem("applicationNumber");
+
+document.getElementById("reference").innerHTML =
+applicationNumber || "Not Available";
+
+// Clear temporary storage
+
+localStorage.removeItem("campushubAdmission");
+localStorage.removeItem("flutterwavePayment");
+// localStorage.removeItem("applicationNumber");
+
+
+</script>
+
+
+</body>
+
+</html>
