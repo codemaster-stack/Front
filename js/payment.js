@@ -254,7 +254,9 @@ function startPayment() {
         return;
 
     }
-
+         console.log("Flutterwave Public Key:", settings.flutterwavePublicKey);
+         console.log("Currency:", visitorCurrency);
+         console.log("Amount:", settings.amount);
     FlutterwaveCheckout({
 
         public_key: settings.flutterwavePublicKey,
