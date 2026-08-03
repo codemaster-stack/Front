@@ -82,9 +82,6 @@ async function loadSettings() {
         document.getElementById("title").value =
             s.title || "";
 
-        document.getElementById("tagline").value =
-            s.tagline || "";
-
         document.getElementById("description").value =
             s.description || "";
 
@@ -249,8 +246,6 @@ document
                 title:
                     document.getElementById("title").value,
 
-                tagline:
-                    document.getElementById("tagline").value,
 
                 description:
                     document.getElementById("description").value,
