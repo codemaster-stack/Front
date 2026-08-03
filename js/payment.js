@@ -190,7 +190,7 @@ async function loadPortal() {
         if (s.logo) {
 
             document.getElementById("organizationLogo").src =
-                "https://back-kafm.onrender.com" + s.logo;
+             s.logo;
 
             document.getElementById("organizationLogo").style.display =
                 "block";
@@ -201,7 +201,7 @@ async function loadPortal() {
         if (s.banner) {
 
             document.getElementById("paymentBanner").src =
-                "https://back-kafm.onrender.com" + s.banner;
+             s.banner;
 
             document.getElementById("paymentBanner").style.display =
                 "block";
@@ -283,7 +283,7 @@ function startPayment() {
 
             description: settings.description,
 
-            logo: "https://back-kafm.onrender.com" + settings.logo
+            logo: settings.logo
 
         }
 

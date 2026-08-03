@@ -57,8 +57,8 @@ async function loadSettings() {
         // Logo Preview
         if (logo) {
 
-            document.getElementById("logoPreview").src =
-                "https://back-kafm.onrender.com" + logo;
+           document.getElementById("logoPreview").src =
+               logo;
 
             document.getElementById("logoPreview").style.display =
                 "block";
@@ -69,7 +69,7 @@ async function loadSettings() {
         if (banner) {
 
             document.getElementById("bannerPreview").src =
-                "https://back-kafm.onrender.com" + banner;
+                banner;
 
             document.getElementById("bannerPreview").style.display =
                 "block";
