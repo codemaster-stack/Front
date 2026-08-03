@@ -111,6 +111,24 @@ const currencyMap = {
 
 };
 
+const supportedCurrencies = [
+
+    "NGN",
+
+    "USD",
+
+    "GBP",
+
+    "EUR",
+
+    "GHS",
+
+    "KES",
+
+    "ZAR"
+
+];
+
 async function detectVisitorCurrency() {
 
     try {
@@ -125,7 +143,13 @@ async function detectVisitorCurrency() {
         data.country_code;
 
         visitorCurrency =
-        currencyMap[countryCode] || "USD";
+       currencyMap[countryCode] || "USD";
+
+       if (!supportedCurrencies.includes(visitorCurrency)) {
+
+       visitorCurrency = "USD";
+
+      }
 
         console.log("Visitor country:", countryCode);
 

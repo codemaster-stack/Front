@@ -7,104 +7,107 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CampusHub Application Successful</title>
+<title>Payment Successful</title>
 
 <link rel="stylesheet" href="css/admission.css">
 
 </head>
 
-
 <body>
-
 
 <div class="page">
 
-
 <div class="card success-card">
-
 
 <div class="logo">
 ✅
 </div>
 
-
-<h1>
-🎉 Application Submitted Successfully
+<h1 id="successTitle">
+Loading...
 </h1>
 
+<p
+class="subtitle"
+id="successMessage">
 
-<p class="subtitle">
-
-Your submition has been confirmed and your admission application has been successfully submitted.
-
-Please save your application reference number. You will need it to track your application status.
+Loading...
 
 </p>
 
-
 <div class="payment-box">
 
-    <h3>
-        Application Tracking Number
-    </h3>
+<h3 id="referenceLabel">
 
-    <h2 id="reference">
-        Loading...
-    </h2>
+Loading...
+
+</h3>
+
+<h2 id="reference">
+
+Loading...
+
+</h2>
 
 </div>
 
 <div class="payment-box">
 
-    <h3>
-        Application Status
-    </h3>
+<h3 id="statusLabel">
 
-    <h2 style="color:green;">
-        Submitted ✓
-    </h2>
+Loading...
+
+</h3>
+
+<h2
+id="successStatus"
+style="color:green;">
+
+Loading...
+
+</h2>
 
 </div>
 
-<p>
+<p id="successFooter">
 
-The University will notify you through your email when your application status changes.
+Loading...
 
 </p>
 
+<a href="index.html">
 
+<button
+class="payBtn"
+id="returnButton">
 
-<a href="/index">
+Loading...
 
-    <button class="payBtn">
-
-        Return Home
-
-    </button>
+</button>
 
 </a>
 
+</div>
 
-
+</div>
 
 <script>
-
 
 const applicationNumber =
 localStorage.getItem("applicationNumber");
 
-document.getElementById("reference").innerHTML =
+document.getElementById("reference").textContent =
 applicationNumber || "Not Available";
 
 // Clear temporary storage
-
 localStorage.removeItem("campushubAdmission");
 localStorage.removeItem("flutterwavePayment");
-// localStorage.removeItem("applicationNumber");
 
+// localStorage.removeItem("applicationNumber");
 
 </script>
 
+<script src="js/success.js"></script>
 
 </body>
 
