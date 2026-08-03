@@ -1,6 +1,6 @@
-const API = "http://localhost:5000/api/settings";
+const API = "https://back-kafm.onrender.com/api/settings";
 
-const uploadAPI = "http://localhost:5000/api/upload";
+const uploadAPI = "https://back-kafm.onrender.com/api/upload";
 
 const token = localStorage.getItem("token");
 
@@ -58,7 +58,7 @@ async function loadSettings() {
         if (logo) {
 
             document.getElementById("logoPreview").src =
-                "http://localhost:5000" + logo;
+                "https://back-kafm.onrender.com" + logo;
 
             document.getElementById("logoPreview").style.display =
                 "block";
@@ -69,7 +69,7 @@ async function loadSettings() {
         if (banner) {
 
             document.getElementById("bannerPreview").src =
-                "http://localhost:5000" + banner;
+                "https://back-kafm.onrender.com" + banner;
 
             document.getElementById("bannerPreview").style.display =
                 "block";

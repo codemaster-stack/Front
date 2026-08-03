@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api/admin/login";
+const API = "https://back-kafm.onrender.com/api/admin/login";
 
 const form = document.getElementById("loginForm");
 

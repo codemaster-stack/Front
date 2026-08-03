@@ -1,5 +1,5 @@
 
-const API = "http://localhost:5000/api/settings";
+const API = "https://back-kafm.onrender.com/api/settings";
             let settings = {};
             let visitorCurrency = "USD";
 
@@ -26,7 +26,7 @@ async function loadPortal() {
         if (s.logo) {
 
             document.getElementById("organizationLogo").src =
-                "http://localhost:5000" + s.logo;
+                "https://back-kafm.onrender.com" + s.logo;
 
             document.getElementById("organizationLogo").style.display =
                 "block";
@@ -37,7 +37,7 @@ async function loadPortal() {
         if (s.banner) {
 
             document.getElementById("paymentBanner").src =
-                "http://localhost:5000" + s.banner;
+                "https://back-kafm.onrender.com" + s.banner;
 
             document.getElementById("paymentBanner").style.display =
                 "block";
@@ -117,7 +117,7 @@ function startPayment() {
 
             description: settings.description,
 
-            logo: "http://localhost:5000" + settings.logo
+            logo: "https://back-kafm.onrender.com" + settings.logo
 
         }
 
