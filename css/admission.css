@@ -132,35 +132,75 @@ body{
 
     width:100%;
 
-    margin-top:30px;
-
-    padding:16px;
+    padding:18px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    background:#1d4ed8;
+    background:linear-gradient(90deg,#FFD700,#F59E0B);
 
-    color:#fff;
+    color:#111827;
 
-    font-size:17px;
+    font-size:20px;
 
-    font-weight:bold;
+    font-weight:700;
 
     cursor:pointer;
 
     transition:.3s;
 
+    box-shadow:0 10px 30px rgba(245,158,11,.45);
+
+    letter-spacing:.5px;
+
 }
 
 .payBtn:hover{
 
-    background:#0d3b66;
+    transform:translateY(-3px) scale(1.03);
 
-    transform:translateY(-2px);
+    background:linear-gradient(90deg,#FACC15,#F97316);
+
+    box-shadow:0 15px 40px rgba(249,115,22,.55);
 
 }
+
+.payBtn:active{
+
+    transform:scale(.98);
+
+}
+
+
+@keyframes pulseCTA{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(245,158,11,.6);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 18px rgba(245,158,11,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(245,158,11,0);
+
+    }
+
+}
+
+.payBtn{
+
+    animation:pulseCTA 2s infinite;
+
+}
+
 
 @media(max-width:600px){
 
