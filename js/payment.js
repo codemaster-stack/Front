@@ -1,7 +1,147 @@
 
 const API = "https://back-kafm.onrender.com/api/settings";
             let settings = {};
-            let visitorCurrency = "USD";
+           let visitorCurrency = "USD";
+
+const currencyMap = {
+
+    NG: "NGN", // Nigeria
+
+    GH: "GHS", // Ghana
+
+    KE: "KES", // Kenya
+
+    ZA: "ZAR", // South Africa
+
+    GB: "GBP", // United Kingdom
+
+    US: "USD", // United States
+
+    CA: "CAD", // Canada
+
+    AU: "AUD", // Australia
+
+    IN: "INR", // India
+
+    JP: "JPY", // Japan
+
+    CN: "CNY", // China
+
+    CH: "CHF", // Switzerland
+
+    AE: "AED", // UAE
+
+    SA: "SAR", // Saudi Arabia
+
+    QA: "QAR", // Qatar
+
+    KW: "KWD", // Kuwait
+
+    EG: "EGP", // Egypt
+
+    MA: "MAD", // Morocco
+
+    ET: "ETB", // Ethiopia
+
+    TZ: "TZS", // Tanzania
+
+    UG: "UGX", // Uganda
+
+    RW: "RWF", // Rwanda
+
+    ZM: "ZMW", // Zambia
+
+    ZW: "USD", // Zimbabwe
+
+    CM: "XAF", // Cameroon
+
+    SN: "XOF", // Senegal
+
+    CI: "XOF", // Côte d'Ivoire
+
+    BJ: "XOF", // Benin
+
+    BF: "XOF", // Burkina Faso
+
+    ML: "XOF", // Mali
+
+    NE: "XOF", // Niger
+
+    TG: "XOF", // Togo
+
+    FR: "EUR", // France
+
+    DE: "EUR", // Germany
+
+    ES: "EUR", // Spain
+
+    IT: "EUR", // Italy
+
+    PT: "EUR", // Portugal
+
+    NL: "EUR", // Netherlands
+
+    BE: "EUR", // Belgium
+
+    IE: "EUR", // Ireland
+
+    AT: "EUR", // Austria
+
+    FI: "EUR", // Finland
+
+    LU: "EUR", // Luxembourg
+
+    GR: "EUR", // Greece
+
+    SK: "EUR", // Slovakia
+
+    SI: "EUR", // Slovenia
+
+    EE: "EUR", // Estonia
+
+    LV: "EUR", // Latvia
+
+    LT: "EUR", // Lithuania
+
+    CY: "EUR", // Cyprus
+
+    MT: "EUR", // Malta
+
+    default: "USD"
+
+};
+
+async function detectVisitorCurrency() {
+
+    try {
+
+        const response =
+        await fetch("https://ipapi.co/json/");
+
+        const data =
+        await response.json();
+
+        const countryCode =
+        data.country_code;
+
+        visitorCurrency =
+        currencyMap[countryCode] || "USD";
+
+        console.log("Visitor country:", countryCode);
+
+        console.log("Visitor currency:", visitorCurrency);
+
+    }
+
+    catch (error) {
+
+        console.log("Currency detection failed.");
+
+        visitorCurrency = "USD";
+
+    }
+
+}
 
 async function loadPortal() {
 
@@ -72,6 +212,8 @@ async function loadPortal() {
     }
 
 }
+
+detectVisitorCurrency();
 
 loadPortal();
 

@@ -104,6 +104,29 @@ async function loadSettings() {
         document.getElementById("flutterwavePublicKey").value =
             s.flutterwavePublicKey || "";
 
+
+
+            document.getElementById("successTitle").value =
+s.successTitle || "";
+
+document.getElementById("successMessage").value =
+s.successMessage || "";
+
+document.getElementById("referenceLabel").value =
+s.referenceLabel || "";
+
+document.getElementById("statusLabel").value =
+s.statusLabel || "";
+
+document.getElementById("successStatus").value =
+s.successStatus || "";
+
+document.getElementById("successFooter").value =
+s.successFooter || "";
+
+document.getElementById("returnButtonText").value =
+s.returnButtonText || "";
+
     }
 
     catch (error) {
@@ -246,6 +269,30 @@ document
 
                 flutterwavePublicKey:
                     document.getElementById("flutterwavePublicKey").value
+
+
+                    ,
+
+successTitle:
+document.getElementById("successTitle").value,
+
+successMessage:
+document.getElementById("successMessage").value,
+
+referenceLabel:
+document.getElementById("referenceLabel").value,
+
+statusLabel:
+document.getElementById("statusLabel").value,
+
+successStatus:
+document.getElementById("successStatus").value,
+
+successFooter:
+document.getElementById("successFooter").value,
+
+returnButtonText:
+document.getElementById("returnButtonText").value
 
             })
 
